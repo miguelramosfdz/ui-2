@@ -5,12 +5,11 @@
     "type": "object",
     "properties": {
       "dictionnary": {
+        "type": "object",
+        "title": "Definition",
         "properties": {
           "values": {
             "type": "array",
-            "title": "Values",
-            "required": "true",
-            "minItems": "1",
             "items": {
               "type": "object",
               "properties": {
@@ -28,31 +27,26 @@
     }
   },
   "uiSchema": {
-    "dictionnary" :{
-      "properties": {
-        "values": {
-          "ui:widget": "enumeration"
-        }
+    "dictionnary": {
+      "values": {
+        "ui:widget": "enumeration"
       }
     }
   },
   "properties": {
     "dictionnary": {
-      "properties": {
+      "values": [
+        {
           "values": [
-            {
-              "values": [
-                "France"
-              ]
-            },
-            {
-              "values": [
-                "Espagne"
-              ]
-            }
+            "France"
           ]
-      }
+        },
+        {
+          "values": [
+            "Espagne"
+          ]
+        }
+      ]
     }
   }
 }
-
