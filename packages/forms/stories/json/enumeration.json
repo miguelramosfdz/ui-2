@@ -4,15 +4,22 @@
     "description": "A enumeration form example.",
     "type": "object",
     "properties": {
-      "documents": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "values": {
-              "type": "array",
-              "items": {
-                "type": "string"
+      "dictionnary": {
+        "properties": {
+          "values": {
+            "type": "array",
+            "title": "Values",
+            "required": "true",
+            "minItems": "1",
+            "items": {
+              "type": "object",
+              "properties": {
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -21,19 +28,31 @@
     }
   },
   "uiSchema": {
-    "documents": {
-      "ui:widget": "enumeration"
+    "dictionnary" :{
+      "properties": {
+        "values": {
+          "ui:widget": "enumeration"
+        }
+      }
     }
   },
   "properties": {
-    "documents": [{
-      "values": [
-        "France"
-      ]
-    }, {
-      "values": [
-        "Espagne"
-      ]
-    }]
+    "dictionnary": {
+      "properties": {
+          "values": [
+            {
+              "values": [
+                "France"
+              ]
+            },
+            {
+              "values": [
+                "Espagne"
+              ]
+            }
+          ]
+      }
+    }
   }
 }
+
